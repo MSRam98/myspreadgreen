@@ -1,0 +1,32 @@
+.navibar{
+    background-color: rgba(0, 0, 0,1);
+    
+}   
+
+.navilink{
+    font-weight: bold;
+}
+.navilink:hover{
+    background-color: rgb(0, 94, 255);
+    color:rgb(0, 0, 0)
+}
+.slidecaption{
+    margin-bottom: 190px;
+    margin-left: 170px;
+    width: 700px;
+    font-size: 25px;
+    background-color: rgba(0, 0, 0,0.3);
+}
+.slidecaption1{
+    margin-bottom: 150px;
+    margin-left: 100px;
+    width: 900px;
+    font-size: 25px;
+    background-color: rgba(0, 0, 0,0.6);
+}
+
+.proimg{
+    margin-top: 50px;
+}
+
+

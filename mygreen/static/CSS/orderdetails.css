@@ -1,0 +1,18 @@
+.navibar{
+    background-color: rgba(0, 0, 0,1);
+    
+}   
+
+.navilink{
+    font-weight: bold;
+}
+.navilink:hover{
+    background-color: rgb(0, 94, 255);
+    color:rgb(0, 0, 0)
+}
+.delete :hover{
+    color:  rgb(0, 94, 255);
+
+}
+
+

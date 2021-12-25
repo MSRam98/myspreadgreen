@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="{% static 'CSS/customerprofile.css' %}">
+        <link rel="icon" type="image/x-icon" href="{% static 'Images/spreadgreenicon.png' %}">
+        <title>Profile</title>
+    </head>
+    <body style="background-color: rgba(128, 128, 128,0.2);">
+        <div>
+            <ul class="container-fluid nav nav-sm p-2 justify-content-end navibar">
+                <li class="nav-item">
+                    <a href="{% url 'shop' %}" class="nav-link mx-5 btn btn-outline-primary border-2 navilink">Shop <span><i class="bi bi-cart-fill"></i></span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'cart' %}" class="nav-link mx-5 btn btn-outline-primary border-2 navilink">Cart <span><i class="bi bi-cart-fill"></i></span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'logout' %}" class="nav-link mx-5 btn btn-outline-primary border-2  navilink">Logout</a>
+                </li>
+            </ul>
+        </div>
+        <div class="container-fluid d-flex " style="height: 660px;">
+            <div class="" style="border: 2px solid indigo;width: 400px;background-color: rgb(255, 255, 255);">
+                <div style="margin-top: 30px;margin-left: 50px;">
+                    <img src="{{customer.profilepic.url}}" alt="profileimage" width="250px" height="250px" class="rounded-circle">
+                </div>
+                <div style="text-align: center; margin-top: 10px;">{{customer.name}}</div>
+                <div>
+                    <div style="margin-top: 90px; margin-left: 70px ;"><a href="{% url 'cart' %}" class="btn btn-primary" style="width: 160px">YourCart</a></div>
+                    <div style="margin-top: 40px; margin-left: 70px ;"><a href="{% url 'orderhistory' %}" class="btn btn-primary" style="width: 160px">Orderhistory</a></div>
+                </div>
+            </div>
+            <div class="" style="border: 2px solid indigo; width: 1300px;height: auto;margin-left: 3px;background-color: white;">
+                <div class="h3 alert alert-primary">Profile Details</div>
+                <div style="margin-top: 40px;margin-left:25px;"></div>
+                <div style="width: 800px; border: 2px solid rgb(22, 60, 230); height: 40px;margin-left:25px;border-radius: 10px;">{{customer.name}}</div>
+                <div style="margin-top: 40px;margin-left:25px;">Email</div>
+                <div style="width: 800px; border: 2px solid rgb(22, 60, 230); height: 40px;margin-left:25px;border-radius: 10px;">{{customer.email}}</div>
+                <div style="margin-top: 40px;margin-left:25px;">Contact</div>
+                <div style="width: 800px; border: 2px solid rgb(22, 60, 230); height: 40px;margin-left:25px;border-radius: 10px;">{{customer.contactnumber}}</div>
+                <div style="margin-top: 40px;margin-left:25px;">Address</div>
+                <div style="width: 800px; border: 2px solid rgb(22, 60, 230); height: 90px;margin-left:25px;border-radius: 10px;">{{customer.address}}</div>
+                <div style="margin-left: 300px;margin-top: 50px;"><a href="{% url 'editprofile' %}" class="btn btn-primary" style="width: 300px;">Edit Profile</a></div>
+            </div>
+        </div>       
+    </body>
+</html>

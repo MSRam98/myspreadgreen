@@ -1,0 +1,1 @@
+web: gunicorn spreadgreen.wsgi --log-file -

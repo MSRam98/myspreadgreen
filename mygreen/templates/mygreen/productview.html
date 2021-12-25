@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="{% static 'CSS/productview.css' %}">
+        <link rel="icon" type="image/x-icon" href="{% static 'Images/spreadgreenicon.png' %}">
+        <title>Productview</title>
+    </head>
+    <body>
+        <div>
+            <ul class="container-fluid nav nav-sm p-2 justify-content-end navibar">
+                <li class="nav-item">
+                    <a href="{% url 'shop' %}" class="nav-link mx-5 btn btn-outline-primary border-2 navilink">Shop <span><i class="bi bi-cart-fill"></i></span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'cart' %}" class="nav-link mx-5 btn btn-outline-primary border-2 navilink">Cart <span><i class="bi bi-cart-fill"></i></span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'logout' %}" class="nav-link mx-5 btn btn-outline-primary border-2  navilink">Logout</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'customerprofile' %}" class="nav-link mx-5 btn btn-outline-primary border-2 px-3 pb-1 navilink">Profile <span><img src="{{request.user.customerdetail.profilepic.url}}" alt="ok" width="25px" height="25px" class="rounded-circle"></span></a>
+                
+                </li>
+            </ul>
+        </div>
+        <div class="d-flex">
+            <div id="homeslide" class="carousel slide border border-dark border-1" data-bs-ride="cariusel" style="width: 900px;margin-top: 45px; margin-left: 10px;">
+                <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#homeslide" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#homeslide" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#homeslide" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#homeslide" data-bs-slide-to="3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item py-5 active">
+                        <div class="h5 alert alert-success" style="margin-left: 93px; width: 600px;">{{products.productname}}</div>
+                        <img src="{{products.productmenupic.url}}" alt="tree forest" class="d-block" style="width: 600px;height: 450px; margin-left: 95px;">
+                    
+                    </div>
+                    <div class="carousel-item py-5">
+                        <div class="h5 alert alert-success" style="margin-left: 93px; width: 600px;">{{products.productname}} image</div>
+                        <img src="{{products.productbuypic1.url}}" alt="tree forest road" class="d-block" style="width: 600px;height:450px; margin-left: 95px;">
+                    </div>
+                    <div class="carousel-item py-5">
+                        <div class="h5 alert alert-success" style="margin-left: 93px; width: 600px;">{{products.productname}} plant</div>
+                        <img src="{{products.productbuypic2.url}}" alt="tree forest road" class="d-block" style="width: 600px;height:450px; margin-left: 95px;">
+                    </div>
+                    <div class="carousel-item py-5">
+                        <div class="h5 alert alert-success" style="margin-left: 93px; width: 600px;">{{products.productname}} seed</div>
+                        <img src="{{products.productbuypic3.url}}" alt="tree forest road" class="d-block" style="width: 700px;height:450px; margin-left: 95px;">
+                    </div>
+                </div>
+                <button type="button" class="carousel-control-prev" data-bs-target="#homeslide" data-bs-slide="prev" style="margin-left:0px;">
+                    <span class="carousel-control-prev-icon btn btn-primary btn-lg"></span>
+                </button>
+                <button class="carousel-control-next" data-bs-target="#homeslide" data-bs-slide="next">
+                    <span class="carousel-control-next-icon btn btn-primary active"></span>
+                </button>
+            </div>
+            <div class="container" style="width: 615px;height: 600px;margin-top: 45px;">
+                <div>
+                    <h5>{{products.productname}} Natural seeds of pack</h5>
+                    <p style="font-size: 14px;">by spreadgreen organization</p>
+                </div>
+                <div class="list-group" style=>
+                    <div class="list-group-item"><span style="color:crimson;">Actual MRP </span>: {{products.productprice}}/-</div>
+                    <div class="list-group-item"><span style="color:crimson;">Offer prices  </span>: {{products.offerprice}}/-</div>
+                    <div class="list-group-item"><span style="color:crimson;">your saved </span>: 100.00/-</div>
+                    <div class="text-primary" style="font-style: italic;">Inclusive all taxes</div>
+                </div>
+                <div class="my-1">
+                    <table class="table table-borderless table-striped">
+                            <thead>
+                            <tr><h6 class="" style="color: crimson;">Specifications:</h6></tr>
+                            </thead>
+                            <tbody>
+                                <tr>                            
+                                <td>Quantity : {{products.quantity}} grams seeds of packect<td>
+                                </tr>
+                                <tr>
+                                    <td>Extras : You will get user guidence manual with your order</td>
+                                </tr>
+                                <tr>
+                                    <td>Soil type : {{products.soiltype}}</td>
+                                </tr>
+                            </tbody>
+
+                    </table>
+                </div>
+                <div class="d-flex">
+                    <div class="border border-primary border-2 rounded rounded-5" style="width: 100px; height: 100px; margin-left: 65px;">
+                        <div class="mx-4"><img src="{% static 'Images/cash on delivery.png' %}" alt="cash on dekivery" width="40px" height="40px"></div>
+                        <div style="font-size: 13px;text-align: center;margin-top: 8px;">cash on delivery <br> available</div>
+                    </div>
+                    <div class="border border-primary border-2 rounded rounded-5" style="width: 100px; height: 100px; margin-left: 50px;">
+                        <div class="mx-4"><img src="{% static 'Images/replacement.png' %}" alt="replacement" width="40px" height="40px"></div>
+                        <div style="font-size: 13px;text-align: center;margin-top: 8px;">replacement in<br>20 days</div>
+                    </div>
+                    <div class="border border-primary border-2 rounded rounded-5" style="width: 100px; height: 100px; margin-left: 50px;">
+                        <div class="mx-4"><img src="{% static 'Images/delivery.png' %}" alt="delivery" width="40px" height="40px"></div>
+                        <div style="font-size: 13px;text-align: center;margin-top: 8px;">spreadgreen<br>door delivery</div>
+                    </div>
+                </div>
+                <div class="my-3" style="margin-left:200px;">
+                    <a href="{% url 'addcart' products.id %}" class="btn btn-primary rounded-pill" style="width: 200px;">Addcart</a>
+                </div>
+                <div style="margin-left:200px;">
+                    <a href="{% url 'buy' products.id %}" class="btn btn-primary rounded-pill" style="width: 200px;">Buy now</a>
+                </div>
+            </div>
+        </div>    
+    </body>
+</html>

@@ -1,0 +1,54 @@
+.body{
+    background-image: url("static 'Images/login1.jpg'")
+}
+
+.navibar{
+    background-color: rgba(0, 0, 0, 0.7);
+    
+}
+.navibar:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+    
+}
+
+.navilink{
+    font-weight: bold;
+}
+.navilink:hover{
+    background-color: rgba(0, 93, 253, 0.2);
+    color:rgb(15, 15, 240)
+}
+.reg{
+    position: relative;
+    z-index: 1;
+}
+
+.regcon{
+    position: absolute;
+    z-index: 2;
+    top: 170px;
+    left: 550px;
+    background-color:rgba(0, 0, 0, 0.8);
+    width: 430px;
+    height: 450px;
+    border-radius: 5px;
+}
+.regdiv{
+    margin-left: 20px;
+}
+
+.userdiv{
+    padding-top: 20px;
+}
+input[type='text']::placeholder{
+   color:rgba(245, 245, 245,0.9);
+   font-size: 17px;
+}
+input[type='password']::placeholder{
+    color:rgba(245, 245, 245,0.9);
+    font-size: 17px;
+ }
+
+
+
+

@@ -1,0 +1,42 @@
+
+
+.navibar{
+    background-color: rgba(0, 0, 0, 0.5);
+    
+}
+.navibar:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+    
+}
+
+.navilink{
+    font-weight: bold;
+}
+.navilink:hover{
+    background-color: rgba(0, 93, 253, 0.2);
+    color:rgb(15, 15, 240)
+}
+
+.slidecaption{
+    margin-bottom: 190px;
+    margin-left: 170px;
+    width: 700px;
+    font-size: 25px;
+    background-color: rgba(0, 0, 0,0.3);
+}
+.slidecaption1{
+    margin-bottom: 150px;
+    margin-left: 100px;
+    width: 900px;
+    font-size: 25px;
+    background-color: rgba(0, 0, 0,0.6);
+}
+
+.about{
+    border: 2px solid rgb(172, 25, 140);
+    text-align: justify;
+    padding: 10px;
+}
+.about h5{
+        text-align: center;
+}

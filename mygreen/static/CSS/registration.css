@@ -1,0 +1,46 @@
+.body{
+    background-image: url("static 'Images/login1.jpg'")
+}
+
+.navibar{
+    background-color: rgba(0, 0, 0, 0.7);
+    
+}
+.navibar:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+    
+}
+
+.navilink{
+    font-weight: bold;
+}
+.navilink:hover{
+    background-color: rgba(0, 93, 253, 0.2);
+    color:rgb(15, 15, 240)
+}
+.reg{
+    position: relative;
+    z-index: 1;
+}
+
+.regcon{
+    position: absolute;
+    z-index: 2;
+    top: 70px;
+    left: 550px;
+    background-color:rgba(0, 0, 0, 0.8);
+    width: 500px;
+    height: 640px;
+    border-radius: 5px;
+}
+.regdiv{
+    margin-left: 110px;
+}
+
+
+.userdiv{
+    padding-top: 10px;
+}
+
+
+
